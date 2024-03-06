@@ -21,7 +21,8 @@ public class App
     	
     	WebDriverManager.chromedriver().setup();
     	ChromeOptions chromeOptions = new ChromeOptions(); 
-  	  	
+
+	// Operate in headless mode -without UI
     	chromeOptions.addArguments("--headless");
   	  
   	  	WebDriver driver = new ChromeDriver(chromeOptions);
@@ -32,7 +33,7 @@ public class App
   	  	driver.get("http://3.239.75.205:8085/contact.html");
   	  	
   	  	// Implicit wait time
-  	  	Thread.sleep(5000);
+  	  	Thread.sleep(2000);
   	  	driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
   	  	
   	  	//2. Fill Name
@@ -40,22 +41,22 @@ public class App
 		System.out.println("Scripted inputName successfully");	  
 	    
 		//3. Fill Mobile Number
-		driver.findElement(By.id("inputNumber")).sendKeys("1011011010");
-	    System.out.println("Scripted inputNumber successfully");
+	    	driver.findElement(By.id("inputNumber")).sendKeys("1011011010");
+	    	System.out.println("Scripted inputNumber successfully");
 	    
-	    //4. Fill email address
-	    driver.findElement(By.id("inputMail")).sendKeys("lingesh@insure-me.com");
-	    System.out.println("Scripted inputMail successfully");
+	    	//4. Fill email address
+	    	driver.findElement(By.id("inputMail")).sendKeys("lingesh@insure-me.com");
+	    	System.out.println("Scripted inputMail successfully");
 	    
-	    //5. Fill message
-	    driver.findElement(By.id("inputMessage")).sendKeys("I have some questions, please reach me on my cellnumber by tomorrow 10 am");
-	    System.out.println("Scripted inputMessage successfully");
+	    	//5. Fill message
+	    	driver.findElement(By.id("inputMessage")).sendKeys("I have some questions, please reach me on my cellnumber by tomorrow 10 am");
+	    	System.out.println("Scripted inputMessage successfully");
 	    
-	    //6. Click send button
-	    driver.findElement(By.id("my-button")).click();
-	    System.out.println("Scripted my-button clicked successfully");
+	    	//6. Click send button
+	    	driver.findElement(By.id("my-button")).click();
+	    	System.out.println("Scripted my-button clicked successfully");
   	  	
-	    System.out.println("Scripts completed successfully");
+	System.out.println("Scripts completed successfully");
   	  	
     }
 }
