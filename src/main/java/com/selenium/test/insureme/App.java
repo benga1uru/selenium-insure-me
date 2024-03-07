@@ -30,7 +30,7 @@ public class App
   	  	System.out.println("Scripted Executing");
   	  
   	  	//1. Open the browser and get to the url
-  	  	driver.get("http://3.239.75.205:8085/contact.html");
+  	  	driver.get("http://18.232.49.165:8085/contact.html");
   	  	
   	  	// Implicit wait time
   	  	Thread.sleep(2000);
